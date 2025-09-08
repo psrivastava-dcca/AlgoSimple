@@ -60,7 +60,7 @@ export interface BacktestResponse {
   providedIn: 'root'
 })
 export class TradingService {
-  private apiUrl = 'http://localhost:5000/api';
+  private apiUrl = 'http://localhost:5050/api';
 
   constructor(private http: HttpClient) { }
 

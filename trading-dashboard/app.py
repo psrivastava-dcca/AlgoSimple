@@ -183,7 +183,8 @@ def run_backtest():
 
 if __name__ == '__main__':
     print("Starting Trading Dashboard API...")
-    print("API will be available at: http://localhost:5000")
-    print("Health check: http://localhost:5000/api/health")
-    print("Market discovery: http://localhost:5000/api/market-discovery")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5050))
+    print(f"API will be available at: http://localhost:{port}")
+    print(f"Health check: http://localhost:{port}/api/health")
+    print(f"Market discovery: http://localhost:{port}/api/market-discovery")
+    app.run(debug=True, host='0.0.0.0', port=port)
